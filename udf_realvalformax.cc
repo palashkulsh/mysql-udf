@@ -103,6 +103,7 @@ void realvalformax_add( UDF_INIT* initid, UDF_ARGS* args, char* is_null, char* i
   {
     if(buffer->max==NULL){
       buffer->max = *(double*)args->args[0];
+      buffer->colval = *(double *)args->args[1];
     }else{
       if((*(double*)args->args[0])>(buffer->max)){
 	buffer->max = *(double *)args->args[0];
