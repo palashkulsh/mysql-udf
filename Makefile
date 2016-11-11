@@ -24,7 +24,9 @@ SRCS = 	udf_colwidth.cc \
 	udf_stdnorm_density.cc \
 	udf_stdnorm_dist.cc \
 	udf_steyx.cc \
-	udf_weightedavg.cc
+	udf_weightedavg.cc \
+	udf_realvalformax.cc \
+	udf_strvalformax.cc
 OBJS =  $(SRCS:%.cc=%.o)
 
 all: $(TARGET)
