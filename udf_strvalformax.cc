@@ -46,7 +46,7 @@ extern "C" {
   void strvalformax_clear(UDF_INIT *initid, char *is_null, char *is_error);
   void strvalformax_reset( UDF_INIT* initid, UDF_ARGS* args, char* is_null, char *error );
   void strvalformax_add( UDF_INIT* initid, UDF_ARGS* args, char* is_null, char *error );
-  char* strvalformax( UDF_INIT* initid, UDF_ARGS* args, char* is_null, char *error );
+  char* strvalformax( UDF_INIT* initid, UDF_ARGS* args,char* result,unsigned long* res_length, char* is_null, char *error );
   
 }
 
@@ -117,7 +117,7 @@ void strvalformax_add( UDF_INIT* initid, UDF_ARGS* args, char* is_null, char* is
 	buffer->colval=NULL;
       }
       buffer->colval = (char *)malloc(args->attribute_lengths[1]+1);
-      strcpy(buffer->colval,args->args[1],attribute_lengths[1]);
+      strcpy(buffer->colval,args->args[1]);
     }else{
       if((*(double*)args->args[0])>(buffer->max)){
 	buffer->max = *(double *)args->args[0];
