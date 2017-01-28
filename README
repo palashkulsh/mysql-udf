@@ -56,5 +56,7 @@ Documentation of added functions
 strvalformin- usage strvalformax(float_val_col,str_val_col)- this udf finds the value of str_val_col corresponding to the minimum value in float_val_col
 
 strvalformax - usage strvalformin(float_val_col,str_val_col)- this udf finds the value of str_val_col corresponding to the maximum value in float_val_col
+
 realvalfordatemax - usage datevalformax(date_val_col,float_val_col)- this udf finds the value of flow_val_col corresponding to the maximum value in date_val_col
+
 realvalformax	- usage realvalformax(float_val_col,real_val_col)- this udf finds the value of real_val_col corresponding to the maximum value in float_val_col
