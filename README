@@ -43,7 +43,15 @@ Then:
 
 The repository on GitHub is at https://github.com/nmmmnu/mysql-udf
 
-7. if you facing error like this during make
+# Steps to get started
+1. Install mysql development package, on linux machines as on 2018-03-31 it can be installed by sudo apt-get install libmysqlclient-dev libmysqld-dev
+2. $> make
+3. make step will generate .o files and would make .so shared library file with all .o files.
+4. check if udf_math.so is generated in the current directory.
+5. copy this udf_math.so file  by sudo cp udf_math.so /usr/lib/mysql/plugin/
+6. now run the import.sql statements in your database. it will add the functions. now the functions are ready to use.
+
+1. if you facing error like this during make
 ```
 g++ -o udf_colwidth.o -O2 -fPIC -I/usr/src/mariadb-5.5.30/include/ -I/usr/include/mysql -DHAVE_DLOPEN=1 -c udf_colwidth.cc
 udf_colwidth.cc:30:23: fatal error: my_global.h: No such file or directory
