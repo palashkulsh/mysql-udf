@@ -28,7 +28,9 @@ SRCS = 	udf_colwidth.cc \
 	udf_realvalformax.cc \
 	udf_strvalformax.cc \
 	udf_strvalformin.cc \
-	udf_realvalfordatemax.cc
+	udf_realvalfordatemax.cc \
+	udf_realvalfordatemin.cc \
+	udf_realvalformin.cc
 OBJS =  $(SRCS:%.cc=%.o)
 
 all: $(TARGET)

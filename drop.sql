@@ -15,4 +15,9 @@ DROP FUNCTION stdnorm_density;
 DROP FUNCTION stdnorm_dist;
 DROP FUNCTION weightedavg;
 DROP FUNCTION steyx;
-
+DROP FUNCTION realvalfordatemax;
+DROP FUNCTION realvalfordatemin;
+DROP FUNCTION realvalformax;
+DROP FUNCTION realvalformin;
+DROP FUNCTION strvalformax;
+DROP FUNCTION strvalformin;
